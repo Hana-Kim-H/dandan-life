@@ -12,12 +12,3 @@ WHERE file.mtime >= date(today) - dur(7 days)
 SORT file.mtime DESC
 LIMIT 8
 -->
-
-## 📂 메뉴
-<div class="index-links">
-[[content/sessions/|회차별 보기]]
-[[content/themes/|주제/개념 사전]]
-/tags/book            | 추천·연관 도서  
-/tags/question        | 생각해볼 질문  
-/tags/highlight       | 하이라이트
-</div>
