@@ -1,13 +1,23 @@
-# 《단단한 삶》 TMI 위키
+# 《단단한 삶》 Too Much Information Wiki
 
-이 위키는 독서 코칭 콘텐츠를 기반으로 책 《단단한 삶》에서 나온 개념, 질문, 관련 자료들을 정리한 보조 가이드입니다. 필요한 정보만 골라서 탐색해보세요.
+<단단한 삶> 독서 코칭 보조 가이드입니다.
+필요한 정보만 골라서 탐색해보세요.
 
-## 📂 콘텐츠 구조
+<!--## 최근 업데이트
 
-- [[00_가이드/이 위키를 보는 법]]
-- [[01_회차별정리/01회차 시작하며]]
-- [[02_개념사전/지적 사고]]
-- [[03_저자와참고자료/김경일 소개]]
-- [[04_확장독서/회복탄력성]]
-- [[05_질문저장소/나에게 단단하다는]]
-- [[06_명언하이라이트/01회차 명언 모음]]
+```dataview
+LIST file.link
+FROM "content"
+WHERE file.mtime >= date(today) - dur(7 days)
+SORT file.mtime DESC
+LIMIT 8
+-->
+
+## 📂 메뉴
+<div class="index-links">
+[[content/sessions/|회차별 보기]]
+[[content/themes/|주제/개념 사전]]
+/tags/book            | 추천·연관 도서  
+/tags/question        | 생각해볼 질문  
+/tags/highlight       | 하이라이트
+</div>

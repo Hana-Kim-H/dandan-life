@@ -27,8 +27,21 @@ const defaultOptions: Options = {
   folderClickBehavior: "link",
   useSavedState: true,
   mapFn: (node) => {
-    return node
-  },
+  // slugSegment 별 한글 표시명 매핑
+  const M: Record<string, string> = {
+    "01_sessions":  "01_ 회차별 보기",
+    "02_themes":    "02_주제/개념 사전",
+    "03_resources": "03_자료",
+    "04_questions": "04_생각해볼 질문",
+    "05_cards":     "05_카드",
+  };
+  const key = node.slugSegment;
+  if (key && M[key]) {
+    node.displayName = M[key];
+  }
+  return node;
+},
+
   sortFn: (a, b) => {
     // Sort order: folders first, then files. Sort folders and files alphabeticall
     if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {

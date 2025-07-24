@@ -34,6 +34,13 @@ export default {
     },
     explorer: {
       title: "탐색기",
+	labels: {
+    	"02_sessions":  "01_회차별 보기",
+    	"03_themes":    "02_주제/개념 사전",
+    	"04_resources": "03_자료",
+    	"05_questions": "04_생각해볼 질문",
+    	"06_cards":     "05_카드",
+	  },
     },
     footer: {
       createdWith: "Created with",

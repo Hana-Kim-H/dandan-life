@@ -1,3 +1,41 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* 1) Obsidian용 Dataview 블록 숨기기 */
+.dv-only { display: none; }
+pre code.language-dataview { display: none; }
+
+/* 2) 홈 메뉴 버튼 스타일 */
+.index-links a {
+  display: inline-block;
+  padding: .45rem .8rem;
+  margin: .3rem .4rem .3rem 0;
+  border: 1px solid var(--gray-300);
+  border-radius: .5rem;
+  text-decoration: none;
+  transition: background .15s;
+}
+.index-links a:hover {
+  background: var(--gray-100);
+}
+
+/* 3) 본문 가독성 (폭/줄간격) */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* 4) 원치 않으면 그래프 숨기기 */
+.graph-container,
+#graph-container {
+  display: none;
+}
+
+/* Dataview 코드 블록 완전히 숨기기 */
+pre.language-dataview,
+pre[data-lang="dataview"],
+code.language-dataview {
+  display: none !important;
+}
