@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "단단한 삶 TMI",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,7 +23,8 @@ const config: QuartzConfig = {
 	  ".obsidian",
 	  "content/_templates",
 	  "content/_workflows",
-	  "content/_transcripts"
+	  "content/_transcripts",
+	  "content/03_resources/books/_author.md",
 	],
     defaultDateType: "modified",
     theme: {
@@ -58,6 +59,7 @@ const config: QuartzConfig = {
           textHighlight: "#b3aa0288",
         },
       },
+ 	customCss: "./quartz/styles/custom.scss"
     },
   },
   plugins: {

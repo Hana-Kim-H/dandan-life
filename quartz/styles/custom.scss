@@ -2,40 +2,92 @@
 
 // put your custom CSS here!
 
-/* 1) Obsidian용 Dataview 블록 숨기기 */
-.dv-only { display: none; }
-pre code.language-dataview { display: none; }
-
-/* 2) 홈 메뉴 버튼 스타일 */
-.index-links a {
-  display: inline-block;
-  padding: .45rem .8rem;
-  margin: .3rem .4rem .3rem 0;
-  border: 1px solid var(--gray-300);
-  border-radius: .5rem;
-  text-decoration: none;
-  transition: background .15s;
-}
-.index-links a:hover {
-  background: var(--gray-100);
-}
-
-/* 3) 본문 가독성 (폭/줄간격) */
-.page {
-  max-width: 760px;
-  margin: 0 auto;
-  line-height: 1.65;
-}
-
-/* 4) 원치 않으면 그래프 숨기기 */
-.graph-container,
-#graph-container {
+// Dataview 코드 블록을 Quartz 웹사이트에서 숨깁니다.
+// Quartz 4의 rehype-pretty-code 렌더링 결과에 맞춰 수정되었습니다.
+figure[data-rehype-pretty-code-figure] pre[data-language="dataview"] {
   display: none;
 }
 
-/* Dataview 코드 블록 완전히 숨기기 */
-pre.language-dataview,
-pre[data-lang="dataview"],
-code.language-dataview {
-  display: none !important;
+/* === 파일/책 링크 스타일 강조 === */
+a {
+  color: #1b4c80;
+  text-decoration: none; // 밑줄 제거
+  transition: color 0.2s, text-decoration 0.2s; // transition에 text-decoration 추가
 }
+
+a:hover {
+  color: #355e9e;
+  background: #f6f6fd;
+  text-decoration: underline; // 호버 시에만 밑줄 표시
+}
+
+/* === 전체 본문 글꼴/간격 개선 (세부 조정) === */
+body {
+  // font-family는 quartz.config.ts에서 설정
+  font-size: 1rem; // 조금 더 작게 혹은 크게 조정
+  line-height: 1.7;   // 줄 간격 조금 더 넓게 (가독성 향상)
+  letter-spacing: 0.01em; // 자간 미세 조정
+}
+
+/* === 제목(h1~h4) 여백/간격 개선 === */
+h1, h2, h3, h4 {
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+  line-height: 1.22;
+  font-weight: 700; // 좀 더 두껍게 (Schibsted Grotesk 폰트에 따라 다름)
+  // text-shadow: 1px 1px 2px rgba(0,0,0,0.1); // 은은한 그림자 효과 (선택 사항)
+}
+
+h2 { // h2 제목 아래에 구분선 추가 (깔끔한 느낌)
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--lightgray); // Quartz의 lightgray 변수 사용
+}
+
+/* === 탐색기/사이드바(Explorer) 폰트 사이즈 개선 === */
+.explorer {
+  font-size: 1.02rem;
+  .folder-node, .file-node {
+    a {
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+      &:hover {
+        background-color: var(--highlight);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* === 태그/뱃지(예: #book, #추천도서) 스타일 개선 === */
+.tag {
+  background: #eaf0fa;
+  color: #295191;
+  border-radius: 1em;
+  padding: 0.1em 0.7em;
+  font-size: 0.97em;
+  // border: 1px solid #c2dcf0; // 약간 더 선명하게
+  // box-shadow: 0 1px 2px rgba(0,0,0,0.05); // 은은한 그림자
+}
+
+/* === 스크롤바 투명하게 만들기 === */
+/* Chrome, Edge, Safari (WebKit 기반 브라우저) */
+::-webkit-scrollbar {
+  width: 0px; /* 세로 스크롤바 너비 */
+  height: 0px; /* 가로 스크롤바 높이 */
+  background: transparent; /* 스크롤바 배경을 투명하게 */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* 스크롤바 트랙 배경 투명 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent; /* 스크롤바 핸들(움직이는 부분) 투명 */
+}
+
+/* 스크롤바 핸들에 마우스를 올렸을 때만 보이게 하려면 (선택 사항) */
+/*
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2); // 마우스 올리면 약간 어둡게 (투명도 조절)
+}
+*/
