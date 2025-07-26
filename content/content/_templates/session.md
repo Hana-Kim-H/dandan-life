@@ -8,7 +8,7 @@ participants: [김하나, A, B]
 status: seed  # seed / growing / evergreen
 ---
 
-## 1. 핵심 요약
+## 1. 요점 정리
 - …
 
 ## 2. 하이라이트
@@ -33,7 +33,11 @@ SORT title ASC
 ```
 <!-- dv-only:end -->
 
-## 4. 코칭 질문
+### 추천 도서
+
+### 연관 도서
+
+## 4. 생각해볼 질문
 
 <!-- dv-only:start -->
 ```dataview
@@ -44,7 +48,7 @@ SORT file.name ASC
 ```
 <!-- dv-only:end -->
 
-## 5. 전하는  말
+## 5. 맺음말
 
 <!-- dv-only:start -->
 ```dataview
@@ -54,6 +58,7 @@ WHERE type = "message" AND session = this.file.name
 ```
 <!-- dv-only:end -->
 
+<!--
 ## 6. 전체 타임코드
 - 00:00:00 …
 
@@ -64,3 +69,4 @@ WHERE type = "message" AND session = this.file.name
 ---
 ### 운영 메모
 - …
+-->
